@@ -12,9 +12,9 @@ import androidx.annotation.Nullable;
 public class database extends SQLiteOpenHelper {
 
     Context context;
-    private static final String dbname = "pratikumsqlite.db";
+    private static final String dbname = "masterakun.db";
     private static final int dbversion = 1;
-    private static final String tbl_mhs_ = "master_mahasiswa";
+    private static final String tbl_mhs_ = "master_akun";
     private static final String tbl_mhs_id = "_id";
     private static final String tbl_mhs_nama = "nama";
     private static final String tbl_mhs_nim = "nim";
@@ -83,7 +83,7 @@ public class database extends SQLiteOpenHelper {
         cv.put(tbl_mhs_umur,umur);
         long hasil = db.update(tbl_mhs_,cv,"_id=?",new String[]{id_row});
         if(hasil == -1){
-            Toast.makeText(context,"Gagal Menyimpan Data Password", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context,"Gagal Menyimpan Data Update", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(context,nama, Toast.LENGTH_SHORT).show();
         }
@@ -94,9 +94,9 @@ public class database extends SQLiteOpenHelper {
         long result = db.delete(tbl_mhs_, "_id=?", new String[]{id_row});
 
         if(result == -1){
-            Toast.makeText(context, "Data mahasiswa gagal dihapus", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Data AKUN Gagal dihapus", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(context, "Data mahasiswa Berhasil dihapus", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Data AKUN Berhasil dihapus", Toast.LENGTH_SHORT).show();
         }
     }
 

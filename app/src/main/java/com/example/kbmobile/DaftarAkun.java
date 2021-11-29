@@ -55,7 +55,7 @@ public class DaftarAkun extends AppCompatActivity {
     private void displayData() {
         Cursor cursor = myDb.SemuaMahasiswa();
         if(cursor.getCount() == 0){
-            Toast.makeText(this,"Data Mahasiswa Kosong!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Data AKUN Kosong!", Toast.LENGTH_SHORT).show();
         }else{
             while (cursor.moveToNext()){
                 _id.add(cursor.getString(0));
